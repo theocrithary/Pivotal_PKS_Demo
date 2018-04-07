@@ -1,4 +1,4 @@
-## How to deploy a Kubernetes cluster using Pivotal Container Services (PKS)
+## Part 1: How to deploy a Kubernetes cluster using Pivotal Container Services (PKS)
 
 Video URL Part 1: https://youtu.be/8MJqHBCe574
 
@@ -31,10 +31,10 @@ http://localhost:8001/ui
 
 use config file located at ~/.kube/config (hint: Mac users CMD + Shift + . displays hidden files in finder)
 
-## How to deploy a Docker container using Pivotal Container Services (PKS)
+
+## Part 2: How to deploy a Docker container using Pivotal Container Services (PKS)
 
 Video URL Part 2: https://youtu.be/
-
 
 #### Login to Harbor registry
 ```
@@ -56,7 +56,7 @@ docker image ls
 docker tag node <harbor.domainname.com>/demo/node
 docker push <harbor.domainname.com>/demo/node
 ```
-If you get an x.509 certificate error at this point, then refer to troushooting notes at the end of this guide.
+If you get an x.509 certificate error at this point, then refer to troubleshooting notes at the end of this guide.
 
 #### Create a basic Node.js web app file and save as server.js
 ```
@@ -71,7 +71,7 @@ var www = http.createServer(handleRequest);
 www.listen(8080);
 ```
 
-#### Create a Docker image file and save as Dockerfile
+#### Create a Docker image file and save as Dockerfile in the same directory as the server.js file
 ```
 FROM node:9.9.0
 EXPOSE 8080
