@@ -98,7 +98,7 @@ kubectl run demo-app --image=<harbor.domainname.com>/demo/demo-app --port=8080
 ## Troubleshooting Notes: For self signed certs, you will need to perform two tasks;
 
 ### 1) Place the Harbor registry root cert into the cert.d directory on your local machine
-- Download the Harbor registry Root certificate from https://<Harbor IP or FQDN>/api/systeminfo/getcert
+- Download the Harbor registry Root certificate from https://<<Harbor IP or FQDN>>/api/systeminfo/getcert
 - For Mac users, follow the below steps to add the self signed cert to the docker engine
 ```
 sudo mkdir ~/.docker/certs.d/<harbor.domainname.com>
@@ -109,7 +109,7 @@ Restart the Docker service using the toolbar icon and test with the below comman
 docker push <harbor.domainname.com>/demo/node
 ```
 
-- For all other OS's, refer to below;
+For all other OS's, refer to below;
 https://docs.docker.com/registry/insecure/#use-self-signed-certificates
 
 ### 2) Place the Harbor registry root cert into the Kubernetes worker node
