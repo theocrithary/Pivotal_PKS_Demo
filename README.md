@@ -95,6 +95,29 @@ docker push <harbor.domainname.com>/demo/demo-app
 kubectl run demo-app --image=<harbor.domainname.com>/demo/demo-app --port=8080
 ```
 
+#### Check the deployment
+```
+kubectl get deployments
+```
+
+#### Create a service and expose it via a port
+```
+kubectl expose deployment/demo-app --type="NodePort" --port 8080
+```
+
+#### Test access to the app
+- Run this command to get the external IP of the node server that is running the app
+```
+kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=="ExternalIP")].address}'
+```
+If more than one IP address is returned, then test each one or use the UI to find the node that is related to your application deployment.
+- Run this command to get the dynamic port number allocated to your application deployment (i.e. 30xxx)
+- Use these two details together to open your application in a browser;
+http://<Node IP>:<30xxx>
+
+### You have successfully deployed and tested an app!
+
+
 ## Troubleshooting Notes: For self signed certs, you will need to perform two tasks;
 
 ### 1) Place the Harbor registry root cert into the cert.d directory on your local machine
