@@ -36,11 +36,6 @@ use config file located at ~/.kube/config (hint: Mac users CMD + Shift + . displ
 
 Video URL Part 2: https://youtu.be/
 
-#### Login to Harbor registry
-```
-docker login <harbor.domainname.com>
-```
-
 #### Pull an image from Docker Hub
 ```
 docker image ls
@@ -48,11 +43,15 @@ docker pull node
 docker image ls
 ```
 
-#### Push an image to Harbor registry
-- Login to the Harbor web interface with a browser; https://<harbor IP or FQDN>
+#### Login to Harbor registry web interface
+
+- Browse to the following URL; https://<harbor IP or FQDN>
 - Create a new project (e.g. demo)
-- Push the node image that was pulled from Docker Hub earlier using the below commands.
+
+#### Push an image to Harbor registry
+
 ```
+docker login <harbor.domainname.com> (use a Harbor username with permissions to the project created earlier)
 docker tag node <harbor.domainname.com>/demo/node
 docker push <harbor.domainname.com>/demo/node
 ```
@@ -86,6 +85,7 @@ docker build -t demo-app .
 
 #### Push the demo-app image to Harbor registry
 ```
+docker login <harbor.domainname.com> (use a Harbor username with permissions to the project created earlier)
 docker tag demo-app <harbor.domainname.com>/demo/demo-app
 docker push <harbor.domainname.com>/demo/demo-app
 ```
