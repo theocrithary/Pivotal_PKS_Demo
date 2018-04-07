@@ -29,7 +29,9 @@ kubectl proxy
 
 http://localhost:8001/ui
 
-use config file located at ~/.kube/config (hint: Mac users CMD + Shift + . displays hidden files in finder)
+Use config file located at ~/.kube/config (hint: Mac users CMD + Shift + . displays hidden files in finder)
+
+
 
 
 ## Part 2: How to deploy a Docker container using Pivotal Container Services (PKS)
@@ -115,7 +117,9 @@ If more than one IP address is returned, then test each one or use the UI to fin
 - Use these two details together to open your application in a browser;
 http://<Node IP>:<30xxx>
 
-### You have successfully deployed and tested an app!
+### You have successfully deployed and tested an app!!!!
+
+
 
 
 ## Troubleshooting Notes: For self signed certs, you will need to perform two tasks;
