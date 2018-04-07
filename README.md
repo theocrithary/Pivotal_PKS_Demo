@@ -45,7 +45,7 @@ docker image ls
 
 #### Login to Harbor registry web interface
 
-- Browse to the following URL; https://<harbor IP or FQDN>
+- Browse to the following URL; https://<harbor.domainname.com>
 - Create a new project (e.g. demo)
 
 #### Push an image to Harbor registry
@@ -98,7 +98,7 @@ kubectl run demo-app --image=<harbor.domainname.com>/demo/demo-app --port=8080
 ## Troubleshooting Notes: For self signed certs, you will need to perform two tasks;
 
 ### 1) Place the Harbor registry root cert into the cert.d directory on your local machine
-- Download the Harbor registry Root certificate from https://<'Harbor IP or FQDN'>/api/systeminfo/getcert
+- Download the Harbor registry Root certificate from https://<harbor.domainname.com>/api/systeminfo/getcert
 - For Mac users, follow the below steps to add the self signed cert to the docker engine
 ```
 sudo mkdir ~/.docker/certs.d/<harbor.domainname.com>
@@ -125,7 +125,7 @@ bosh -e <Ops Manager Director IP> -d service-instance_<UID> ssh worker/<UID of W
 ```
 Download the Harbor registry Root certificate from https://<Harbor IP or FQDN>/api/systeminfo/getcert
 ```
-sudo mkdir /etc/docker/certs.d/<Harbor IP or FQDN>
-sudo vi /etc/docker/certs.d/<Harbor IP or FQDN>/ca.crt (copy and paste the contents of downloaded certificate file)
+sudo mkdir /etc/docker/certs.d/<harbor.domainname.com>
+sudo vi /etc/docker/certs.d/<harbor.domainname.com>/ca.crt (copy and paste the contents of downloaded certificate file)
 docker pull <harbor.domainname.com>/demo/demo-app (to test and verify the certificate works)
 ```
