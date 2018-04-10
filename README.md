@@ -36,17 +36,17 @@ Use config file located at ~/.kube/config (hint: Mac users CMD + Shift + . displ
 
 Video URL Part 2: https://youtu.be/
 
+#### Login to Harbor registry web interface
+
+- Browse to the following URL; https://<harbor.domainname.com>
+- Create a new project (e.g. demo)
+
 #### Pull an image from Docker Hub
 ```
 docker image ls
 docker pull node
 docker image ls
 ```
-
-#### Login to Harbor registry web interface
-
-- Browse to the following URL; https://<harbor.domainname.com>
-- Create a new project (e.g. demo)
 
 #### Push an image to Harbor registry
 
