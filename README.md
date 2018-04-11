@@ -72,7 +72,7 @@ www.listen(8080);
 
 #### Create a Docker image file and save as Dockerfile in the same directory as the server.js file
 ```
-FROM node:9.9.0
+FROM node
 EXPOSE 8080
 COPY server.js .
 CMD node server.js
