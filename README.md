@@ -34,7 +34,7 @@ Use config file located at ~/.kube/config (hint: Mac users CMD + Shift + . displ
 
 ## Part 2: How to deploy a Docker container using Pivotal Container Services (PKS)
 
-Video URL Part 2: https://youtu.be/Zeyec9UOgmc
+Video URL Part 2: https://youtu.be/JzTShC6P-1I
 
 #### Login to Harbor registry web interface
 
