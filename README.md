@@ -5,7 +5,7 @@ Video URL Part 1: https://youtu.be/8MJqHBCe574
 #### Create UAA user with PKS Cluster permissions
 ```
 uaac target https://<pks api url>:8443 --skip-ssl-validation
-uaac token client get admin -s <uaa admin secret>
+uaac token client get admin -s <Pks Uaa Management Admin Client - secret>
 uaac user add demo --emails demo@demo.com -p <password>
 uaac member add pks.clusters.admin demo
 ```
