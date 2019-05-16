@@ -27,7 +27,7 @@ kubectl proxy
 
 #### Web UI
 
-http://localhost:8001/ui
+http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
 
 Use config file located at ~/.kube/config (hint: Mac users CMD + Shift + . displays hidden files in finder)
 <br><br>
