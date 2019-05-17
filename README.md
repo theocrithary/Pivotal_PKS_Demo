@@ -108,10 +108,13 @@ kubectl expose deployment/demo-app --type="NodePort" --port 8080
 #### Test access to the app
 - Run this command to get the external IP of the node server that is running the app
 ```
-kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=="ExternalIP")].address}'
+kubectl get nodes -L spec.ip
 ```
-If more than one IP address is returned, then test each one or use the UI to find the node that is related to your application deployment.
+If more than one IP address is returned, then test each of the spec.ip's or use the UI to find the node that is related to your application deployment.
 - Run this command to get the dynamic port number allocated to your application deployment (i.e. 30xxx)
+```
+kubectl get svc demo-app
+```
 - Use these two details together to open your application in a browser;
 http://<Node IP>:<30xxx>
 
