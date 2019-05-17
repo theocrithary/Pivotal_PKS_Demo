@@ -116,8 +116,9 @@ If more than one IP address is returned, then test each of the spec.ip's or use 
 kubectl get svc demo-app
 ```
 - Use these two details together to open your application in a browser;
+```
 http://<node spec.ip>:<30xxx>
-
+```
 ### You have successfully deployed and tested an app!!!!
 
 <br><br>
