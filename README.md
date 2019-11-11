@@ -1,6 +1,6 @@
 ## Part 1: How to deploy a Kubernetes cluster using Pivotal Container Services (PKS)
 
-Video URL Part 1: https://youtu.be/8MJqHBCe574
+Video URL Part 1: https://www.youtube.com/watch?v=gTqs7b6Hy3M
 
 #### Create UAA user with PKS Cluster permissions
 ```
